@@ -16,9 +16,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/weatherIconImageView"
+        android:src="@drawable/na"
+
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/na" />
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/weatherimage" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,9 +28,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/temperature"
         android:id="@+id/temperatureTextView"
-        android:layout_below="@+id/weatherIconImageView"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/weatherIconImageView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,7 +39,7 @@
         android:text="@string/condition_string"
         android:id="@+id/conditionTextView"
         android:layout_below="@+id/temperatureTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_toEndOf="@+id/weatherIconImageView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,14 +48,30 @@
         android:text="@string/location_string"
         android:id="@+id/locationTextView"
         android:layout_below="@+id/conditionTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/conditionTextView" />
 
-    <ImageView
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/purple"
-        android:layout_below="@+id/locationTextView"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/locationsListView"
+
+        android:layout_below="@+id/weatherIconImageView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:layout_above="@+id/imageButton" />
+
+    <ImageButton
+        android:layout_width="25dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageButton"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:src="@drawable/add_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/addbutton"
+        android:onClick="switchToNewImage" />
+
 
 </RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Saturday"
+        android:id="@+id/dayID"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="01/01"
+        android:id="@+id/dateID"
+        android:layout_below="@+id/dayID"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:id="@+id/dateImageIconId"
+        android:layout_alignBottom="@+id/dateID"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/na"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="28"
+        android:id="@+id/highID"
+        android:layout_alignBottom="@+id/dateImageIconId"
+        android:layout_toStartOf="@+id/lowID"
+        android:layout_marginEnd="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="10"
+        android:id="@+id/lowID"
+        android:layout_marginEnd="30dp"
+        android:layout_alignBottom="@+id/dateImageIconId"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

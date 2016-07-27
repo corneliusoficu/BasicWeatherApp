@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@null">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Location"
+        android:id="@+id/locationID"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="--"
+        android:id="@+id/temperatureID"
+        android:layout_alignTop="@+id/locationID"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherImage"
+        android:layout_alignTop="@+id/temperatureID"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/icon_36"
+        android:layout_alignBottom="@+id/temperatureID" />
+
+</RelativeLayout>
